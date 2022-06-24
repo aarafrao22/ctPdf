@@ -2,15 +2,12 @@ package com.grandmaaverse.pdfApp
 
 import android.app.ActionBar
 import android.content.SharedPreferences
-import android.graphics.*
+import android.graphics.Color
 import android.os.Bundle
 import android.view.View
-import android.widget.ArrayAdapter
 import android.widget.ImageView
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.viewpager.widget.ViewPager
 import com.github.barteksc.pdfviewer.listener.OnPageChangeListener
 import com.github.barteksc.pdfviewer.scroll.DefaultScrollHandle
 import com.github.barteksc.pdfviewer.util.FitPolicy
@@ -45,6 +42,35 @@ class PdfActivity : AppCompatActivity(), OnPageChangeListener, View.OnClickListe
         binding = ActivityPdfBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val chapter = intent.getStringExtra("chapterNo")
+
+        when (chapter) {
+            "1" -> openPdf("Title")
+            "2" -> openPdf("Introduction")
+            "3" -> openPdf("Journey to Finding")
+            "4" -> openPdf("Cause of Suffering")
+            "5" -> openPdf("Why Do We Think")
+            "6" -> openPdf("Thoughts VS Thinking")
+            "7" -> openPdf("If We Can")
+            "8" -> openPdf("The Three Principles")
+            "9" -> openPdf("Stop Thinking")
+            "10" -> openPdf("How Can We")
+            "11" -> openPdf("If We Stop")
+            "12" -> openPdf("Unconditional")
+            "13" -> openPdf("What Do U Do")
+            "14" -> openPdf("Nothing")
+            "15" -> openPdf("Do Without")
+            "16" -> openPdf("Follow Intuition")
+            "17" -> openPdf("Miracles")
+            "18" -> openPdf("Obstacles")
+            "19" -> openPdf("Now What")
+            "20" -> openPdf("Non-Thinking")
+            "21" -> openPdf("Guide to Stop")
+            "22" -> openPdf("Guide to Creating")
+        }
+
+
+
 
         nightBtn = findViewById(R.id.nightMode)
 
@@ -54,8 +80,12 @@ class PdfActivity : AppCompatActivity(), OnPageChangeListener, View.OnClickListe
         binding.nightMode.setOnClickListener(this)
 
 
-        binding.pdfView.fromAsset("cashflow1.pdf")
-            .defaultPage(pagesNo)
+    }
+
+    private fun openPdf(pdfName: String) {
+
+        binding.pdfView.fromAsset(pdfName + ".pdf")
+            .defaultPage(0)
             .onPageChange(this)
             .swipeHorizontal(true)
             .pageSnap(true)
