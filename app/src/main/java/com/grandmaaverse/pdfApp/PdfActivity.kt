@@ -14,13 +14,11 @@ import com.github.barteksc.pdfviewer.util.FitPolicy
 import com.grandmaaverse.pdfApp.databinding.ActivityPdfBinding
 
 
-class PdfActivity : AppCompatActivity(), OnPageChangeListener, View.OnClickListener {
+class PdfActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var binding: ActivityPdfBinding
-    private lateinit var sharedPref: SharedPreferences
 
     private var list: List<Int>? = null;
-    private lateinit var editor: SharedPreferences.Editor
     var nightMode: Boolean = false
     var position: Int = 0
 
@@ -33,11 +31,6 @@ class PdfActivity : AppCompatActivity(), OnPageChangeListener, View.OnClickListe
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val decorView = window.decorView
-        val uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN
-        decorView.systemUiVisibility = uiOptions
-        val actionBar: ActionBar? = actionBar
-        actionBar?.hide()
 
         binding = ActivityPdfBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -70,13 +63,7 @@ class PdfActivity : AppCompatActivity(), OnPageChangeListener, View.OnClickListe
         }
 
 
-
-
         nightBtn = findViewById(R.id.nightMode)
-
-        setSupportActionBar(binding.toolbar)
-        sharedPref = getSharedPreferences("myPref", MODE_PRIVATE)
-        val pagesNo = sharedPref.getInt("page", 1)
         binding.nightMode.setOnClickListener(this)
 
 
@@ -86,7 +73,6 @@ class PdfActivity : AppCompatActivity(), OnPageChangeListener, View.OnClickListe
 
         binding.pdfView.fromAsset(pdfName + ".pdf")
             .defaultPage(0)
-            .onPageChange(this)
             .swipeHorizontal(true)
             .pageSnap(true)
             .scrollHandle(DefaultScrollHandle(this, true))
@@ -99,13 +85,7 @@ class PdfActivity : AppCompatActivity(), OnPageChangeListener, View.OnClickListe
 
     }
 
-    override fun onPageChanged(page: Int, pageCount: Int) {
-        isTrue = true
-        editor = sharedPref.edit()
-        editor.putInt("page", page)
-        editor.apply()
 
-    }
 
     override fun onClick(p0: View?) {
 

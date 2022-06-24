@@ -17,10 +17,6 @@ class FirstActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        binding.layout2.setOnClickListener {
-            val intent: Intent = Intent(this, BookmarkActivity::class.java)
-            startActivity(intent)
-        }
 
 
     }
