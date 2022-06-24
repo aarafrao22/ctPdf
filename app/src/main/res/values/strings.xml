@@ -1,3 +1,26 @@
 <resources>
-    <string name="app_name">Pdf Client</string>
+    <string name="app_name">Dont Believe Everything you think</string>
+    <string name="ch1">Title</string>
+    <string name="ch2">Introduction</string>
+    <string name="ch3">Journey to Finding</string>
+    <string name="ch4">Cause of Suffering</string>
+    <string name="ch5">Why Do We Think</string>
+    <string name="ch6">Thoughts VS Thinking</string>
+    <string name="ch7">If We Can</string>
+    <string name="ch8">The Three Principles</string>
+    <string name="ch9">Stop Thinking</string>
+    <string name="ch10">How Can We</string>
+    <string name="ch11">If We Stop</string>
+    <string name="ch12">Unconditional</string>
+    <string name="ch13">What Do U Do</string>
+    <string name="ch14">Nothing</string>
+    <string name="ch15">Do Without</string>
+    <string name="ch16">Follow Intuition</string>
+    <string name="ch17">Miracles</string>
+    <string name="ch18">Obstacles</string>
+    <string name="ch19">Now What</string>
+    <string name="ch20">Non-Thinking</string>
+    <string name="ch21">Guide to Stop</string>
+    <string name="ch22">Guide to Creating</string>
+
 </resources>

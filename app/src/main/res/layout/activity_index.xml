@@ -10,9 +10,9 @@
         android:id="@+id/scroll"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:padding="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:padding="12dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -20,116 +20,141 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:tag="1"
-                android:text="ہیلو موتو"/>
+
 
             <Button
+                android:id="@+id/ch1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:tag="2"
-                android:text="ہیلو موتو"/>
+                android:text="@string/ch1" />
 
             <Button
+                android:id="@+id/ch2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:tag="2"
-                android:text="ہیلو موتو"/>
+                android:text="@string/ch2" />
 
             <Button
+                android:id="@+id/ch3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:tag="1"
-                android:fontFamily="@font/jameelnoori"
-                android:text="ہیلو موتو"/>
+                android:text="@string/ch3" />
 
             <Button
+                android:id="@+id/ch4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:tag="2"
-                android:text="ہیلو موتو"/>
+                android:text="@string/ch4" />
 
             <Button
+                android:id="@+id/ch5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:tag="2"
-                android:text="ہیلو موتو"/>
+                android:text="@string/ch5" />
 
             <Button
+                android:id="@+id/ch6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:tag="1"
-                android:text="ہیلو موتو"/>
+                android:text="@string/ch6" />
 
             <Button
+                android:id="@+id/ch7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:tag="2"
-                android:text="ہیلو موتو"/>
+                android:text="@string/ch7" />
 
             <Button
+                android:id="@+id/ch8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:tag="2"
-                android:text="ہیلو موتو"/>
+                android:text="@string/ch8" />
 
             <Button
+                android:id="@+id/ch9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:tag="1"
-                android:text="ہیلو موتو"/>
+                android:text="@string/ch9" />
 
             <Button
+                android:id="@+id/ch10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:tag="2"
-                android:text="ہیلو موتو"/>
+                android:text="@string/ch10" />
 
             <Button
+                android:id="@+id/ch11"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:tag="2"
-                android:text="ہیلو موتو"/>
+                android:text="@string/ch11" />
 
             <Button
+                android:id="@+id/ch12"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:tag="1"
-                android:text="ہیلو موتو"/>
+                android:text="@string/ch12" />
 
             <Button
+                android:id="@+id/ch13"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:tag="2"
-                android:text="ہیلو موتو"/>
+                android:text="@string/ch13" />
 
             <Button
+                android:id="@+id/ch14"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:tag="2"
-                android:text="ہیلو موتو"/>
+                android:text="@string/ch14" />
 
             <Button
+                android:id="@+id/ch15"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:tag="1"
-                android:text="ہیلو موتو"/>
+                android:text="@string/ch15" />
 
             <Button
+                android:id="@+id/ch16"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:tag="2"
-                android:text="ہیلو موتو"/>
+                android:text="@string/ch16" />
 
             <Button
+                android:id="@+id/ch17"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:tag="2"
-                android:text="ہیلو موتو"/>
+                android:text="@string/ch17" />
+
+            <Button
+                android:id="@+id/ch18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ch18" />
+
+            <Button
+                android:id="@+id/ch19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ch19" />
+
+            <Button
+                android:id="@+id/ch20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ch20" />
+
+            <Button
+                android:id="@+id/ch21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ch21" />
+
+            <Button
+                android:id="@+id/ch22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ch22" />
+
         </LinearLayout>
-
 
 
     </ScrollView>
