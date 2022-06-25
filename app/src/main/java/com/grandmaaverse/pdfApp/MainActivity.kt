@@ -13,8 +13,9 @@ class MainActivity : AppCompatActivity() {
 
         val SPLASH_DISPLAY_LENGTH: Long = 2200
         Handler().postDelayed({
-            val mainIntent = Intent(this@MainActivity, IndexActivity::class.java)
+            val mainIntent = Intent(this@MainActivity, FirstActivity::class.java)
             startActivity(mainIntent)
+            finish()
 
         }, SPLASH_DISPLAY_LENGTH)
 

@@ -12,11 +12,10 @@ class FirstActivity : AppCompatActivity() {
         binding = ActivityFirstBinding.inflate (layoutInflater)
         setContentView(binding.root)
 
-        binding.layout1.setOnClickListener {
-            val intent: Intent = Intent(this,PdfActivity::class.java)
+        binding.btnRead.setOnClickListener {
+            val intent: Intent = Intent(this,IndexActivity::class.java)
             startActivity(intent)
         }
-
 
 
     }
