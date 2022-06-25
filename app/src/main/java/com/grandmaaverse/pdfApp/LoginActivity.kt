@@ -2,6 +2,7 @@ package com.grandmaaverse.pdfApp
 
 import android.content.ContentValues.TAG
 import android.content.Intent
+import android.content.SharedPreferences
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
@@ -14,8 +15,12 @@ import com.grandmaaverse.pdfApp.databinding.ActivityLoginBinding
 
 
 class LoginActivity : AppCompatActivity() {
-//    private lateinit var auth: FirebaseAuth
+    //    private lateinit var auth: FirebaseAuth
     private lateinit var binding: ActivityLoginBinding
+    private lateinit var sharedPref: SharedPreferences
+    private lateinit var editor: SharedPreferences.Editor
+
+    var status: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,24 +28,31 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-//        auth = Firebase.auth
 
+        sharedPref = getSharedPreferences("myPref", MODE_PRIVATE)
+        status = sharedPref.getBoolean("page", false)
+
+//        auth = Firebase.auth
 
 
         binding.btnLogin.setOnClickListener {
 
-
             val email = binding.edEmail.text.toString()
             val password = binding.edPassword.text.toString()
 
-            if (email=="abc@gmail.com"&&password=="12345"){
-                val intent: Intent = Intent(this,IndexActivity::class.java)
-                startActivity(intent)
-                finish()
-                Toast.makeText(this,"Logged In Successfully!",Toast.LENGTH_SHORT).show()
+            if (status == false) {
+                if (email == "abc@gmail.com" && password == "12345") {
+                    val intent: Intent = Intent(this, IndexActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                    Toast.makeText(this, "Logged In Successfully!", Toast.LENGTH_SHORT).show()
+                    editor = sharedPref.edit()
+                    editor.putBoolean("page", true)
+                    editor.apply()
 
-            }else{
-                Toast.makeText(this,"Wrong Credentials",Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(this, "Wrong Credentials", Toast.LENGTH_SHORT).show()
+                }
             }
 
         }
@@ -90,11 +102,12 @@ class LoginActivity : AppCompatActivity() {
 
     }
 
-//    override fun onStart() {
-//        super.onStart()
-//        val currentUser = auth.currentUser
-//        if (currentUser != null) {
-////            reload();
-//        }
-//    }
+    override fun onStart() {
+        super.onStart()
+        if (status==true){
+            val intent: Intent = Intent(this, IndexActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+    }
 }
