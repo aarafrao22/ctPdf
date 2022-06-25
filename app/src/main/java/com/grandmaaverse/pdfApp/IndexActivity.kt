@@ -5,11 +5,34 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdSize
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.MobileAds
 
 class IndexActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_index)
+
+        val mAdView:AdView
+        val mAdView1:AdView
+        val mAdView2:AdView
+        val mAdView3:AdView
+
+        MobileAds.initialize(this) {}
+
+        mAdView = findViewById(R.id.adView)
+        mAdView1 = findViewById(R.id.adView2)
+        mAdView2 = findViewById(R.id.adView3)
+        mAdView3 = findViewById(R.id.adView4)
+        val adRequest = AdRequest.Builder().build()
+        mAdView.loadAd(adRequest)
+        mAdView1.loadAd(adRequest)
+        mAdView2.loadAd(adRequest)
+        mAdView3.loadAd(adRequest)
+
+
 
         val ch1: Button = findViewById(R.id.ch1)
         val ch2: Button = findViewById(R.id.ch2)

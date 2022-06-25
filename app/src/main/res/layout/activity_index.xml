@@ -53,6 +53,15 @@
                 android:layout_height="wrap_content"
                 android:text="@string/ch5" />
 
+            <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/adView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                ads:adSize="BANNER"
+                ads:adUnitId="@string/bannerAd"/>
+
             <Button
                 android:id="@+id/ch6"
                 android:layout_width="match_parent"
@@ -82,6 +91,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/ch10" />
+
+            <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/adView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                ads:adSize="BANNER"
+                ads:adUnitId="@string/bannerAd"></com.google.android.gms.ads.AdView>
 
             <Button
                 android:id="@+id/ch11"
@@ -113,6 +131,15 @@
                 android:layout_height="wrap_content"
                 android:text="@string/ch15" />
 
+            <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/adView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                ads:adSize="BANNER"
+                ads:adUnitId="@string/bannerAd"></com.google.android.gms.ads.AdView>
+
             <Button
                 android:id="@+id/ch16"
                 android:layout_width="match_parent"
@@ -142,6 +169,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/ch20" />
+
+            <com.google.android.gms.ads.AdView
+                xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/adView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                ads:adSize="BANNER"
+                ads:adUnitId="@string/bannerAd">
+
+            </com.google.android.gms.ads.AdView>
 
             <Button
                 android:id="@+id/ch21"

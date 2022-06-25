@@ -24,7 +24,8 @@
     <string name="ch22">Guide to Creating</string>
 
 
-    <string name="bannerAd">ca-app-pub-8620621477902075/1219514416</string>
+<!--    <string name="bannerAd">ca-app-pub-8620621477902075/1219514416</string>-->
+    <string name="bannerAd">ca-app-pub-3940256099942544/6300978111</string>
     <string name="InterstitialAd">ca-app-pub-8620621477902075/2069561655</string>
 
 

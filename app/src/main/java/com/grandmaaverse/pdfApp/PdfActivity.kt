@@ -11,6 +11,9 @@ import androidx.appcompat.app.AppCompatActivity
 import com.github.barteksc.pdfviewer.listener.OnPageChangeListener
 import com.github.barteksc.pdfviewer.scroll.DefaultScrollHandle
 import com.github.barteksc.pdfviewer.util.FitPolicy
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.MobileAds
 import com.grandmaaverse.pdfApp.databinding.ActivityPdfBinding
 
 
@@ -31,9 +34,17 @@ class PdfActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-
         binding = ActivityPdfBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
+        val mAdView: AdView
+        MobileAds.initialize(this) {}
+        mAdView = findViewById(R.id.adView)
+        val adRequest = AdRequest.Builder().build()
+        mAdView.loadAd(adRequest)
+
+
 
         val chapter = intent.getStringExtra("chapterNo")
 
@@ -57,7 +68,7 @@ class PdfActivity : AppCompatActivity(), View.OnClickListener {
             "17" -> openPdf("Miracles")
             "18" -> openPdf("Obstacles")
             "19" -> openPdf("Now What")
-            "20" -> openPdf("Non-Thinking")
+            "20" -> openPdf("Non Thinking")
             "21" -> openPdf("Guide to Stop")
             "22" -> openPdf("Guide to Creating")
         }
