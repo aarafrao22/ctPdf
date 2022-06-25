@@ -65,6 +65,7 @@ class PdfActivity : AppCompatActivity(), View.OnClickListener {
 
         nightBtn = findViewById(R.id.nightMode)
         binding.nightMode.setOnClickListener(this)
+        binding.backPress.setOnClickListener(this)
 
 
     }
