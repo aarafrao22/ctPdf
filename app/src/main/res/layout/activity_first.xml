@@ -43,11 +43,11 @@
             android:layout_height="wrap_content"
             android:text="Review" />
 
-        <Button
-            android:id="@+id/btnShare"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Share" />
+<!--        <Button-->
+<!--            android:id="@+id/btnShare"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Share" />-->
 
         <Button
             android:id="@+id/btnInsta"
